@@ -104,10 +104,14 @@ for fs in finished_sandwiches:          #for each item in final list
 """
 
 # 7-9 No pastrami:
-
+"""
 sandwich_orders = ['pastrami', 'meatloaf', 'vegetarian', 'pastrami', 'tuna salad', 'pastrami', 'blt',
                    'club']
 finished_sandwiches = []
+# Remove all mentions of pastrami
+print(f"We don't have Pastrami.\n")
+while 'pastrami' in sandwich_orders:    
+    sandwich_orders.remove('pastrami')
 
 while sandwich_orders:      # while list has items = True, run loop
     f_sandwich = sandwich_orders.pop()          # pop items from sandwich_orders list (automatically added
@@ -115,12 +119,36 @@ while sandwich_orders:      # while list has items = True, run loop
     print(f"Making your {f_sandwich.title()}")  # print each item
     finished_sandwiches.append(f_sandwich)      # move items to empty list
 
-print(f"Finished making the following sandwiches:")
+print(f"\nFinished making the following sandwiches:\n")
 for fs in finished_sandwiches:          #for each item in final list
     print(f"{fs.title()} sandwich.")    #print item
+"""
 
+# 7-10 Dream Vacation:
+# create a poll
 
+name_prompt = "\nWhat is your name? "
+place_prompt = "\nIf you could visit one place in the world, where would you go? "
+continue_prompt = "\nDoes someone else want to answer the survey? "
 
+# stores results in dictionary, {name: place}
+poll = {}
+
+while True:
+    # retrieve answers from polling questions
+    name = input(name_prompt)
+    place = input(place_prompt)
+    #
+    poll[name] = place
+    #
+    repeat = input(continue_prompt)
+    if repeat != 'yes':
+        break
+
+# print results
+print("\n--- RESULTS ---")
+for name, place in poll.items():
+    print(f"{name.title()} wants to visit {place.title()}")
 
 
 
