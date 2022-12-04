@@ -2,7 +2,7 @@ name_prompt = "\nWhat's your name? "
 place_prompt = "If you could visit one place in the world, where would it be? "
 continue_prompt = "\nWould you like to let someone else respond? (yes/no) "
 
-# Responses will be stored in the form {name: place}.
+# Responses will be stored in responses dict {name: place}.
 responses = {}
 
 while True:
@@ -11,7 +11,9 @@ while True:
     place = input(place_prompt)
 
     # Store the response.
-    responses[name] = place
+    responses[name] = place     # I know I'm storing the response here, but
+    #  I don't quite get the syntax. Why is "name" in [] and "place" on the
+    #  other side of = ?
 
     # Ask if there's anyone else responding.
     repeat = input(continue_prompt)
