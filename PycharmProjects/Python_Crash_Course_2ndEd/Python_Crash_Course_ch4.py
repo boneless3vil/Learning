@@ -26,8 +26,8 @@ print("Thank you, everyone. That was a great magic show!")
 # loop. See line 14 don't forget the ":" or you get a syntax error
 """
 for magician in magicians:
-    print(f"{magician.title()} should produce an error") 
-        #no indentation will produce a error
+print(f"{magician.title()} should produce an error") 
+        #no indentation of print() produces an error
 
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
@@ -62,7 +62,7 @@ for value in range(1, 6):
     print(value)    #again, doesn't print 2nd value listed, but up to it
 #pass range() starts the sequence at 0 and goes to the number value
 for value in range(7):
-    print(value)
+    print(value)    # prints numbers 1-6
 """
 
 # Using range() to make a list of numbers
@@ -76,11 +76,13 @@ print(even_numbers)
 
 # squaring numbers using **
 """
+# squares every number between 1-10, prints values
 squares = []
 for value in range(1, 11):
     square = value ** 2
     squares.append(square)
 print(squares)
+
 # simplified code
 squares = []
 for value in range(1, 11):
@@ -96,7 +98,8 @@ print(squares)
 """
 
 # 4-3 counting to 20
-"""count = [value++1 for value in range(0, 20)]
+"""
+count = [value++1 for value in range(0, 20)]
 print(count)
 """
 # 4-4 1 million
@@ -120,7 +123,7 @@ print(odds)
 
 # 4-7 threes: list multiples of 3 from 3 to 30.
 """
-threes = list(range(3, 30, 3))    #range(starting value, ending value, skip value)
+threes = list(range(3, 31, 3))    #range(starting value, ending value, skip value)
 print(threes)
 """
 

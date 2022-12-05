@@ -144,30 +144,31 @@ len(cars)
 # 3-8 seeing the world
 """
 travel_list = ['england', 'japan', 'australia', 'israel', 'france']
-print("Raw list printed:")
+# original list printed
+print("Original list printed:")
 print(f"\n\t{travel_list}")
 
-# prints in reverse order, alphabetically
+# prints alphabetically using sorted()
 print(f"\nSorted list:")
 print(f"\n\t{sorted(travel_list)}")
-print(f"\n\tRaw again:")
+# original list printed again
+print(f"\nOriginal list again:")
 print(f"\n\t{travel_list}")
 
-# use reverse ()
-print("\nList reversed:")
-travel_list.reverse()
-print(f"\n\t{travel_list}")
-print(f"\n\tRaw again:")
-travel_list.reverse()
-print(f"\n\t{travel_list}")
+# use sorted() + reverse list
+print("\nSorted() and reversed:")
+print(f"\n\t{sorted(travel_list, reverse=True)}")
+# use reverse again and print
+print(f"\nReversed again, still sorted() and printed:")
+print(f"\n\t{sorted(travel_list)}")
 
 # use sort ()
 print("\nList sort():")
 travel_list.sort()
 print(f"\n\t{travel_list}")
-
+# use sort() list in reverse alphabetical
 travel_list.sort(reverse=True)
-print(f"\n\tRaw again:")
+print(f"\nReverse sort():")
 print(f"\n\t{travel_list}")
 """
 
@@ -183,40 +184,52 @@ print(f"\n Number of guests: {len(guests)}")
 """
 
 # 3-10 Every Function "My list of movies"
-
+"""
 movies = ['gladiator', 'star trek', 'indiana jones', 'lord of the rings']
 print(f"Raw list: \n\t{movies}")
+
 # starting with empty list
 bad_movies = []
+
 # sorted() function
 print(f"\nSorted: \n\t{sorted(movies)}")
 print(f"\nUnsorted again: \n\t{movies}")
+
 # reverse()
-print(f"Reversed list: ")
+print(f"\nReversed list: ")
 movies.reverse()
 print(f"\t{movies}")
+# original list
 movies.reverse()
-print(f"Raw list again: \n\t{movies}")
+print(f"\nRaw list again: \n\t{movies}")
+
+
 # append()
 movies.append('matrix')
 print(f"\nAppended Matrix: \n\t{movies}")
+
 # insert()
 movies.insert(1, 'hobbit')
 print(f"\n Inserted Hobbit: \n\t{movies}")
+
 # remove() – often used when you don't know the value of an item
 print(f"\nRemoved Star Trek: ")
 movies.remove('star trek')
 print(f"\n\t{movies}")
+
 # printing specific items from a list
 print(f"\nThis movie is about the Romans: {movies[0].title()}")
 print(f"This movie is last on the list: {movies[4].title()}")
+
 # len()
-print(len(movies))
+print(f"\nlen(): {len(movies)}")
+
 # pop() then re-print len()
 movies.pop()
-print(len(movies))
+print(f"\npop() then len() printed: {len(movies)}")
+
 # modify list
 movies[0] = 'spartacus'
-print(movies)
-
+print(f"\nReplaced Gladiator at 0 with Spartacus: {movies}")
+"""
 
