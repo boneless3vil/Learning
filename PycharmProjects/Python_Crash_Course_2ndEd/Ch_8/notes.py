@@ -182,17 +182,98 @@ total = make_album('depeche mode', 'music for the masses', '1987')
 print(total)
 """
 
+# 8-8 user albums
+
+# make_album_mine.py
+# Python crash course, 2nd edition
+# here, I tried to do exercise chapter 8-7, but added inputs, so I can build
+# the dictionary from scratch... It doesn't seem to work just yet
+
+"""
+def make_album(artist, title, year):
+    # assigns artist, album to dictionary
+    album = {
+        'artist': artist.title(),
+        'title': title.title()}
+    if year:
+        album['year'] = year
+    return album
+# organize inputs or whatever
+print("\nAdd an Album to the Dictionary")
+print("(enter 'q' at any time to quit)")
+# while loop
+while True:
+    artist = input("\nArtist: ")
+    if artist == 'q':
+        break
+    title = input("Album: ")
+    if title == 'q':
+        break
+    year = input("Year: ")
+    if year == 'q':
+        break
+# album_d = make_album()
+    total = make_album(artist, title, year)
+    print(total)
+
+print("\nEnjoy your albums!")
+"""
+
+# PASSING THE LIST: greet_users.py
+
+# MODIFYING A LIST IN A FUNCTION: printing_models.py --  when you need to move items from
+#   one list to another. every function should have one job, specific.
+
+# preventing a function from modifying a list by sending a copy of the list:
+#   function_name(list_name[:])     # slice copies list and sends to function
+#   example:
+#   previous exercise: print_models(printed_designs[:], completed_models)
+
+#8-9 Messages:
+
+"""
+def show_messages(texts):
+    # pass messages and print #
+    for text in texts:
+        print(text)
+
+messages = ['hey there!', 'No. not coming.', 'yes, you are.']
+show_messages(messages)
+"""
+
+# 8-10 sending messages
+
+# function:  send_messages() -> prints each text message
+#   2: after printing, sends each message to sent_messages()
+#   3: print each list to show the messages have been moved
+"""
+def show_messages(messages):
+    print("Showing all messages:")
+    for message in messages:
+        print(message)
 
 
+def f_messages(messages, sent_messages):
+    print("\nPrinting all messages:")
+    while messages:
+        current_messages = messages.pop()
+        print(current_messages)
+        sent_messages.append(current_messages)
 
+messages = ['Hello!', 'No. Not me.', 'Will you go?']
+show_messages(messages)
 
+sent_messages = []
+f_messages(messages, sent_messages)
 
+print("\nFinal lists:")
+print(messages)
+print(sent_messages)
+"""
 
+# Passing an arbitrary number of arguments– pizza.py
 
-
-
-
-
+#Mixing positional and arbitrary arguments –
 
 
 
