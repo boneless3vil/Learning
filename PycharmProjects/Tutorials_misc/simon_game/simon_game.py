@@ -5,20 +5,23 @@ import random
 import time
 
 import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BOARD)    # use PHYSICAL GPIO Numbering
 GPIO.setwarnings(False)
 
+# COLOR assigned to physical PIN
 red = 18
 yellow = 22
 green = 24
 blue = 26
 
-GPIO.setup(red, GPIO.OUT)
+# set pins to output
+GPIO.setup(red, GPIO.OUT)   # here, pin 18 set to output
 GPIO.setup(yellow, GPIO.OUT)
 GPIO.setup(green, GPIO.OUT)
 GPIO.setup(blue, GPIO.OUT)
 
-GPIO.setup(32, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# set button Pins to PULL UP INPUT mode
+GPIO.setup(32, GPIO.IN, pull_up_down=GPIO.PUD_UP)   # this button on pin 32
 GPIO.setup(36, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(38, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_UP)
