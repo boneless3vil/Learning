@@ -12,7 +12,7 @@ GPIO.setwarnings(False)
 red = 18
 yellow = 22
 green = 24
-blue = 26
+blue = 25
 
 # set pins to output
 GPIO.setup(red, GPIO.OUT)   # here, pin 18 set to output
@@ -75,7 +75,6 @@ while game:
                     game = False
                 time.sleep(1)
                 GPIO.output(green, GPIO.LOW)
-
 
             if blueButtonState == 0:
                 GPIO.output(blue, GPIO.HIGH)

@@ -10,3 +10,4 @@ red = 18
 GPIO.setup(red, GPIO.OUT)   # set the ledPin (18) to OUTPUT mode
 
 GPIO.output(red, GPIO.LOW)  # make ledPin (18) output LOW level
+# GPIO.output(red, GPIO.HIGH)
