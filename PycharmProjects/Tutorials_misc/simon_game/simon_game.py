@@ -47,7 +47,7 @@ while game:
             redButtonState = GPIO.input(32)
             yellowButtonState = GPIO.input(36)
             greenButtonState = GPIO.input(38)
-            blueButtonState = GPIO.input(26)
+            blueButtonState = GPIO.input(40)
 
             if redButtonState == 0:
                 GPIO.output(red, GPIO.HIGH)
