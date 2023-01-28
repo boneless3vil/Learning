@@ -8,6 +8,7 @@ LEDblue = 22
 LEDgreen = 24
 LEDyellow = 26
 
+
 def setup():
     GPIO.setmode(GPIO.BOARD)    # use PHYSICAL GPIO Numbering
     # set up LED pins to OUTPUT mode
@@ -20,6 +21,8 @@ def setup():
     GPIO.output(LEDblue, GPIO.LOW)
     GPIO.output(LEDgreen, GPIO.LOW)
     GPIO.output(LEDyellow, GPIO.LOW)
+    print('using pin%d'%LEDred)
+
 
 def loop():
     while True:
@@ -51,7 +54,15 @@ def loop():
         print('LED turned off <<<<')
         time.sleep(0.1)
 
+
 def destroy():
     GPIO.cleanup()  # Release all GPIO
 
+
 if __name__ == '__main __':
+    print('Program is starting... \n')
+    setup()
+    try:
+        loop()
+    except KeyboardInterrupt:   # Press CTRL-C in the program.
+        destroy()
