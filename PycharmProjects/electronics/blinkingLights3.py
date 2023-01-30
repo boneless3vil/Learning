@@ -32,13 +32,14 @@ def setup():
 
 def loop():
     while True:
-        GPIO.output(LEDred, GPIO.HIGH)  # make ledPin output HIGH level to turn on led
-        print ('LEDred turned on >>>')     # print information on terminal
-        time.sleep(1)                   # Wait for 1 second
-        GPIO.output(LEDred, GPIO.LOW)   # make ledPin output LOW level to turn off led
-        print ('LEDred turned off <<<')
-        time.sleep(1)                   # Wait for 1 second
-
+        for LED in LEDs:
+            GPIO.output(LED, GPIO.HIGH)  # make ledPin output HIGH level to turn on led
+            print ('LEDred turned on >>>')     # print information on terminal
+            time.sleep(1)                   # Wait for 1 second
+            GPIO.output(LED, GPIO.LOW)   # make ledPin output LOW level to turn off led
+            print ('LED turned off <<<')
+            time.sleep(1)                   # Wait for 1 second
+"""
         GPIO.output(LEDblue, GPIO.HIGH)
         print ('LEDblue turned on >>>')
         time.sleep(1)
@@ -59,6 +60,7 @@ def loop():
         GPIO.output(LEDyellow, GPIO.LOW)
         print ('LEDyellow turned off <<<')
         time.sleep(1)
+"""
 
 def destroy():
     GPIO.cleanup()                      # Release all GPIO
