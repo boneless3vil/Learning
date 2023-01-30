@@ -8,7 +8,7 @@
 import RPi.GPIO as GPIO
 import time
 
-LEDred = 11    # define ledPin
+LEDred = 18    # define ledPin
 LEDblue = 22
 LEDgreen = 24
 LEDyellow = 26
@@ -34,10 +34,10 @@ def loop():
     while True:
         for LED in LEDs:
             GPIO.output(LED, GPIO.HIGH)  # make ledPin output HIGH level to turn on led
-            print ('LEDred turned on >>>')     # print information on terminal
+            print (f'{LED} turned on >>>')     # print information on terminal
             time.sleep(1)                   # Wait for 1 second
             GPIO.output(LED, GPIO.LOW)   # make ledPin output LOW level to turn off led
-            print ('LED turned off <<<')
+            print (f'{LED} turned off <<<')
             time.sleep(1)                   # Wait for 1 second
 """
         GPIO.output(LEDblue, GPIO.HIGH)
