@@ -33,38 +33,19 @@ def setup():
 
 def loop():
     while True:
-        for LED in LEDs:
-            GPIO.output(LED, GPIO.HIGH)  # make ledPin output HIGH level to turn on led
-            print (f'{LED} turned on >>>')     # print information on terminal
+        for k, v in LEDs.items():
+            """ LEDs turned on/off"""
+            GPIO.output(v, GPIO.HIGH)
+            print (f'{k} turned on >>>')     # print LED color to terminal
             time.sleep(1)                   # Wait for 1 second
-            GPIO.output(LED, GPIO.LOW)   # make ledPin output LOW level to turn off led
-            print (f'{LED} turned off <<<')
-            time.sleep(1)                   # Wait for 1 second
-"""
-        GPIO.output(LEDblue, GPIO.HIGH)
-        print ('LEDblue turned on >>>')
-        time.sleep(1)
-        GPIO.output(LEDblue, GPIO.LOW)
-        print ('LEDblue turned off <<<')
-        time.sleep(1)
+            GPIO.output(v, GPIO.LOW)
+            print (f'{k} turned off <<<')
+            time.sleep(1)
 
-        GPIO.output(LEDgreen, GPIO.HIGH)
-        print ('LEDgreen turned on >>>')
-        time.sleep(1)
-        GPIO.output(LEDgreen, GPIO.LOW)
-        print ('LEDgreen turned off <<<')
-        time.sleep(1)
-
-        GPIO.output(LEDyellow, GPIO.HIGH)
-        print ('LEDyellow turned on >>>')
-        time.sleep(1)
-        GPIO.output(LEDyellow, GPIO.LOW)
-        print ('LEDyellow turned off <<<')
-        time.sleep(1)
-"""
 
 def destroy():
     GPIO.cleanup()                      # Release all GPIO
+
 
 if __name__ == '__main__':    # Program entrance
     print('Program is starting ... \n')
