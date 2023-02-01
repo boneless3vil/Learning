@@ -11,24 +11,25 @@ import time
 # define ledPin
 LEDs = {
     'LEDred': 11,
-    'LEDblue': 22,
-    'LEDgreen': 13,
-    'LEDyellow': 26
+    'LEDyellow': 22,
+    'LEDblue': 13,
+    'LEDgreen': 26
     }
+
 
 def setup():
     GPIO.setmode(GPIO.BOARD)       # use PHYSICAL GPIO Numbering
     # set the ledPin to OUTPUT mode
-    GPIO.setup(LEDred, GPIO.OUT)
-    GPIO.setup(LEDblue, GPIO.OUT)
-    GPIO.setup(LEDgreen, GPIO.OUT)
-    GPIO.setup(LEDyellow, GPIO.OUT)
+    GPIO.setup(LEDs['LEDred'], GPIO.OUT)
+    GPIO.setup(LEDs['LEDyellow'], GPIO.OUT)
+    GPIO.setup(LEDs['LEDblue'], GPIO.OUT)
+    GPIO.setup(LEDs['LEDgreen'], GPIO.OUT)
     # make ledPin output LOW level
-    GPIO.output(LEDred, GPIO.LOW)
-    GPIO.output(LEDblue, GPIO.LOW)
-    GPIO.output(LEDgreen, GPIO.LOW)
-    GPIO.output(LEDyellow, GPIO.LOW)
-    print('using pin%d' % LEDred)
+    GPIO.output(LEDs['LEDred'], GPIO.LOW)
+    GPIO.output(LEDs['LEDyellow'], GPIO.LOW)
+    GPIO.output(['LEDblue'], GPIO.LOW)
+    GPIO.output(LEDs['LEDgreen'], GPIO.LOW)
+    print('using pin(s) ', LEDs.values())
 
 
 def loop():
@@ -36,10 +37,10 @@ def loop():
         for k, v in LEDs.items():
             """ LEDs turned on/off"""
             GPIO.output(v, GPIO.HIGH)
-            print (f'{k} turned on >>>')     # print LED color to terminal
+            print(f'k turned on >>>')     # print LED color to terminal
             time.sleep(1)                   # Wait for 1 second
             GPIO.output(v, GPIO.LOW)
-            print (f'{k} turned off <<<')
+            print(f'k turned off <<<')
             time.sleep(1)
 
 
