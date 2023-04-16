@@ -9,7 +9,6 @@ import re
 import tkinter as tk
 from tkinter import filedialog, Listbox, messagebox
 import pyperclip
-# import pytube
 from pytube import YouTube
 import os
 
