@@ -1,0 +1,36 @@
+# Python environments
+venv/
+.venv/
+visual-env/
+*-env/
+.venv-test/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# photocat user data / generated (machine-specific — don't commit)
+photocat.config.json
+*.db
+*.db-wal
+*.db-shm
+*.log
+
+# model weights (downloaded on first run)
+*.pt
+
+# editor + build artifacts
+.vscode/
+*.egg-info/
+
+# quarantined duplicates (real photos, never commit)
+_duplicates/
+duplicates/
+
+# generated test images + scratch/probe scripts
+test_images/
+_*.py
+_smoketest/
+_verify/
+_aitest/
+_cfgtest/

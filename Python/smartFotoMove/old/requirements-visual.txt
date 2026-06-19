@@ -1,0 +1,12 @@
+# Core Computer Vision & Deep Learning
+opencv-python-headless>=4.8.0  # Lighter version of OpenCV without GUI dependencies
+ultralytics>=8.0.0            # For YOLOv8 object detection
+pillow>=10.0.0                # Python Imaging Library for basic image processing
+
+# UI & Progress Tracking
+rich>=13.0.0                  # For beautiful CLI interfaces
+tqdm>=4.65.0                  # For progress bars
+
+# Optional: Uncomment these for additional visual processing tasks
+numpy>=1.24.0                 # Required by most visual processing libraries
+torch>=2.0.0                  # Required for YOLOv8 model

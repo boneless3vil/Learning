@@ -1,0 +1,14 @@
+# Core Computer Vision & Deep Learning
+opencv-python-headless  # Lighter version of OpenCV without GUI dependencies
+ultralytics            # For YOLOv8 object detection
+pillow                 # Python Imaging Library for basic image processing
+
+# UI & Progress Tracking
+rich                   # For beautiful CLI interfaces
+tqdm                   # For progress bars
+
+# Optional: Uncomment these for additional visual processing tasks
+# numpy                # Required by most visual processing libraries
+# torch                # Deep learning framework (required by some 3D/video tools)
+# open3d              # 3D processing library
+# moviepy             # Video editing and processing
